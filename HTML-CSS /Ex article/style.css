@@ -1,0 +1,74 @@
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Section bannière / hero ===== */
+
+.hero {
+    height: 300px;                /* Hauteur simple */
+    background-image: url('https://picsum.photos/1600/900');
+    background-size: cover;       /* L’image prend toute la place */
+    background-position: center;
+    text-align: center;           /* Centre le texte */
+    padding-top: 80px;            /* Pour descendre le texte un peu */
+    color: white;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ===== Section article ===== */
+
+.article-section {
+    padding: 20px;
+}
+
+article {
+    max-width: 600px;
+    margin: auto;                 /* Centre l’article */
+    text-align: center;
+}
+
+article img {
+    width: 100%;                  /* L’image s’adapte */
+    margin: 15px 0;
+}
+
+article h2 {
+    margin-bottom: 10px;
+}
+
+article p {
+    line-height: 1.4;
+}

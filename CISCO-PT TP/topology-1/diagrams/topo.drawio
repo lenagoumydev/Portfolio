@@ -1,0 +1,82 @@
+<mxfile host="65bd71144e">
+    <diagram id="vRHhOh8Q1ZOysKZeHQj9" name="topo">
+        <mxGraphModel dx="631" dy="813" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="25" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Router&lt;/font&gt;" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.router;" parent="1" vertex="1">
+                    <mxGeometry x="265.3" y="63.51" width="55" height="36.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;" parent="1" source="3" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Router (internet)&lt;/font&gt;" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.router;" parent="1" vertex="1">
+                    <mxGeometry x="481.5" y="63.5" width="55" height="36.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="4" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;192.168.20.10/24&lt;/font&gt;" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="329.99999999999994" width="45.6" height="61.800000000000004" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="5" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;192.168.21.10&lt;/font&gt;" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="370" width="45.6" height="61.800000000000004" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=none;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#e1d5e7;strokeColor=#9673a6;startArrow=classic;startFill=1;" parent="1" source="6" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;192.168.21.11&lt;/font&gt;" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="370" width="45.6" height="61.800000000000004" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=none;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;startArrow=classic;startFill=1;" parent="1" source="7" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;192.168.22.10&lt;/font&gt;" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" parent="1" vertex="1">
+                    <mxGeometry x="495" y="335" width="45.6" height="61.800000000000004" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="8" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" parent="1" vertex="1">
+                    <mxGeometry x="255.6" y="200" width="74.4" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="9" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Patch Panel&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.patch_panel;" parent="1" vertex="1">
+                    <mxGeometry x="245" y="300" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.799;entryY=0.947;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="9" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.179;entryY=0.977;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="9" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.986;entryY=0.857;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="9" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Web server&lt;/font&gt;" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.web_server;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="48.519999999999996" width="56.5" height="66.47" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;" edge="1" parent="1" source="28" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="DHCP+ DNS 192.168.31.3&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.web_server;" vertex="1" parent="1">
+                    <mxGeometry x="456.5" y="230" width="45.5" height="53.53" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;" edge="1" parent="1" source="29" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Server Web 192.168.30.3" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.web_server;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="145.29" width="46.5" height="54.71" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
