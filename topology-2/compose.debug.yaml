@@ -1,0 +1,6 @@
+services:
+  gestionconfigcisco:
+    image: gestionconfigcisco
+    build:
+      context: .
+      dockerfile: ./Dockerfile
