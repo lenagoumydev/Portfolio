@@ -1,0 +1,174 @@
+\documentclass[a4paper,twoside,11pt]{article}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{minted}
+\usepackage[most]{tcolorbox}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\newcommand{\highlight}[1]{\textcolor{brown}{\textbf{#1}}}
+\geometry{margin=2cm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=brown,
+    filecolor=magenta,      
+    urlcolor=brown,
+    pdftitle={Topologie 1},
+    pdfpagemode=FullScreen,
+}
+
+
+% Styles pour les boîtes
+\newtcolorbox{definitionbox}[1][]{
+  colframe=cyan!20!cyan,
+  colback=cyan!20,
+  title={Définition},
+  fonttitle=\bfseries,
+  #1
+}
+
+\newtcolorbox{exemplebox}[1][]{
+  title=\textbf{Exemple},
+  colback=green!3,
+  colframe=green!50!black,
+  #1
+}
+
+\newtcolorbox{methodebox}[1][]{
+  title=\textbf{Méthode / Analyse structurée},
+  colback=orange!3,
+  colframe=orange!70!black,
+  #1
+}
+
+\newtcolorbox{attentionbox}[1][]{
+  colback=red!20,
+  colframe=red!50!red,
+  title={Attention},
+  fonttitle=\bfseries,
+  #1
+}
+
+
+\newtcolorbox{profbox}[1][]{
+  colframe=violet!20!violet,
+  colback=violet!20,
+  title={Exemple / Idée },
+  fonttitle=\bfseries,
+  #1
+}
+
+\newtcolorbox{redbox}[1][]{
+  colback=red!20,
+  colframe=red!50!red,
+  title={Par coeur/ Attention},
+  fonttitle=\bfseries,
+  #1
+}
+
+\title{Analyse de la Topologie 4\\ Architecture Router-on-a-stick\large }
+\author{Boris Rose}
+\begin{document}
+
+\maketitle
+\fancypagestyle{}{}
+\pagestyle{fancy}
+\fancyhead{} 
+\fancyhead[RO,LE]{\textbf{Topologie 1}}
+\fancyfoot{} 
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Lena GOUMY}
+\fancyfoot[CO,RE]{}
+
+\begin{center}
+\includegraphics[scale=0.5]{"../images/Topologie-4.png"}    
+\end{center}
+
+\tableofcontents
+
+\section{Introduction}
+
+\begin{profbox}[title=Compétences travaillées]
+    \begin{itemize}
+        \item Concevoir une solution d'infrastructure réseau (bloc 2)
+        \item Installer tester et déployer une solution d'infrastructuré réseau (bloc 2)
+        \item Sécuriser les équipements et les usages des utilisateurs (bloc 3)
+    \end{itemize}
+\end{profbox}
+
+
+\begin{definitionbox}[breakable,title=Router-on-a-Stick (ROAS)]
+
+Le \textit{Router-on-a-Stick} permet le routage inter-VLAN avec un seul lien physique entre un switch L2 et un routeur.\\
+Le port du switch connecté au routeur est configuré en \texttt{trunk} (802.1Q) pour transporter plusieurs VLANs.\\
+Côté routeur, on crée des \textit{sous-interfaces} sur l’interface physique (ex: \texttt{G0/0.10}, \texttt{G0/0.20}).\\
+Chaque sous-interface est associée à un VLAN via \texttt{encapsulation dot1Q <vlan\_id>}.\\
+On attribue une adresse IP à chaque sous-interface : c’est la passerelle par défaut des hôtes du VLAN.\\
+Les machines de chaque VLAN utilisent cette IP comme \texttt{default gateway}.\\
+Le switch conserve la commutation intra-VLAN, le routeur assure la communication entre VLANs.\\
+
+\end{definitionbox}
+\begin{redbox}
+Avantage : simple et économique (pas besoin de switch L3 même si en l'occurrence j'en ai mis un).\\
+Limite : le lien trunk et le routeur peuvent devenir un goulot d’étranglement.\\
+\end{redbox}
+
+\begin{profbox}[title=Améliorations à apporter]
+
+  \begin{itemize}
+      \item On sécurise souvent avec ACLs
+      \item VLAN natif maîtrisé
+      \item Trunk autorisant uniquement les VLANs nécessaires
+  \end{itemize}
+
+\end{profbox}
+
+
+
+\section{Architecture de ségrégation réseau}
+
+Dans le cadre de cette topologie, il s'agissait de représenter trois services de l'organisation:
+\begin{itemize}
+  \item Le service marketing 
+  \item Le service des ressources humaines 
+\end{itemize}
+\bigskip 
+
+\subsection{Création de VLANs}
+
+Chaque service représente ici un segment logique du réseau physique:
+\begin{itemize}
+  \item Marketing - VLAN 22
+  \item Ressouces Humaines - VLAN 20
+\end{itemize}
+
+\begin{definitionbox}[title=Définition d'un VLAN]
+Un VLAN (\textit{Virtual LAN}) segmente logiquement un réseau sur une même infrastructure physique.\\
+Chaque VLAN crée un domaine de broadcast distinct.\\
+Deux hôtes dans le même VLAN communiquent directement via le switch (couche 2).\\
+Deux hôtes dans des VLANs différents ne communiquent pas sans routage inter-VLAN.\\
+Un switch peut porter plusieurs VLANs simultanément.\\
+Un port \texttt{access} appartient à un seul VLAN (poste client, imprimante).\\
+Un port \texttt{trunk} transporte plusieurs VLANs avec l’étiquetage 802.1Q.\\
+Chaque VLAN est souvent associé à un sous-réseau IP différent.\\
+La passerelle de chaque VLAN est fournie par un routeur ou un switch L3.\\
+Objectifs : isolation, sécurité, performance et organisation du réseau.
+
+\end{definitionbox}
+
+\begin{profbox}[title=Mesures importantes]
+\begin{itemize}
+    \item Activer Port-Security sur les ports utilisateurs.
+    \item Créer un VLAN de management dédié.
+    \item Activer DHCP Snooping et Dynamic ARP Inspection.
+    \item Restreindre les VLAN autorisés sur le trunk.
+\end{itemize}
+\end{profbox}
+
+
+\end{document}
