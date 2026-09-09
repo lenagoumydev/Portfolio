@@ -123,8 +123,8 @@ Premiers pas en développement web front-end : structuration et mise en forme de
 
 Ouverte aux opportunités de **stage / alternance** en réseau, infrastructure ou DevOps.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/TON-LIEN-LINKEDIN)
-[![Email](https://img.shields.io/badge/Email-2C5F8A?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ton.email@example.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]((https://www.linkedin.com/in/lena-goumy-562405356/))
+[![Email](https://img.shields.io/badge/Email-2C5F8A?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lena.goumypro@gmail.com)
 
 <br/>
 
