@@ -83,7 +83,7 @@ Déploiement et provisionnement automatisé d'infrastructure combinant Terraform
 Travaux pratiques réalisés dans le cadre de ma formation, couvrant divers aspects du réseau et des systèmes.
 
 **Stack :** Divers
-[![Voir le projet](https://img.shields.io/badge/Voir-Tp--Dirigée-2C5F8A?style=flat-square)](https://github.com/lenagoumydev/Portfolio/tree/main/Tp-Dirig%C3%A9e)
+[![Voir le projet]([Tp-Dirigée](https://github.com/lenagoumydev/Portfolio/tree/main/Tp-Dirigée))
 
 </td>
 <td width="50%">
