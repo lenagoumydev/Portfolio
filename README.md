@@ -61,6 +61,8 @@ Conception et configuration de plusieurs topologies réseau (VLAN, routage, séc
 
 **Stack :** Cisco IOS, Packet Tracer
 [![Voir le projet](https://img.shields.io/badge/Voir-topology--1-2C5F8A?style=flat-square)](https://github.com/lenagoumydev/Portfolio/tree/main/topology-1)
+[![Voir le projet](https://img.shields.io/badge/Voir-topology--2-2C5F8A?style=flat-square)](https://github.com/lenagoumydev/Portfolio/tree/main/topology-2)
+[![Voir le projet](https://img.shields.io/badge/Voir-topology--3-2C5F8A?style=flat-square)](https://github.com/lenagoumydev/Portfolio/tree/main/topology-3)
 [![Voir le projet](https://img.shields.io/badge/Voir-topology--4-2C5F8A?style=flat-square)](https://github.com/lenagoumydev/Portfolio/tree/main/topology-4)
 
 </td>
