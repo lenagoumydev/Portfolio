@@ -87,3 +87,8 @@ Technique **router-on-a-stick** sur l'interface `GigabitEthernet 0/0/1` :
 - Chaque VLAN a sa propre sous-interface (`.20`, `.21`, `.22`, `.30`, `.31`, `.99`)
 - Encapsulation **802.1Q** (dot1Q)
 - Un `ip helper-address` pointe vers `192.168.31.3` pour relayer le DHCP vers les VLANs clients
+
+<div align="center">
+⬅️ [Retour au portfolio](https://github.com/lenagoumydev/Portfolio)
+ 
+</div>
